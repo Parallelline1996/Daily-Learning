@@ -1,3 +1,8 @@
-# DailyCoding
+# 日学学习笔记
 
-日常编码记录
+## JAVA
+
+1. [重复使用同一输入流](https://blog.csdn.net/Applying/article/details/104763226)
+ 
+
+## RabbitMQ
