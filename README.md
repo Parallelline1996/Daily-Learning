@@ -6,3 +6,5 @@
  
 
 ## RabbitMQ
+
+![test](https://github.com/Parallelline1996/Daily-Learning/blob/master/RabbitMQ/photo/test.jpeg)
