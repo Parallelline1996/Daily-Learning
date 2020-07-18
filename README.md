@@ -20,6 +20,9 @@
 
 [本地提交账号密码输入错误如何修改](https://blog.csdn.net/Applying/article/details/107136992)
 
+## Linux
+
+[Linux指令整理](https://github.com/Parallelline1996/Daily-Learning/blob/master/Linux/Linux%E6%8C%87%E4%BB%A4.md)
 
 ## 个人博客
 
