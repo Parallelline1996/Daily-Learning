@@ -24,6 +24,12 @@
 
 [Linux指令整理](https://github.com/Parallelline1996/Daily-Learning/blob/master/Linux/Linux%E6%8C%87%E4%BB%A4.md)
 
+## 数据库
+### Cassandra
+
+1. [查看列的时间戳](https://blog.csdn.net/Applying/article/details/104978730)
+2. [删除机制 & 墓碑清理](https://blog.csdn.net/Applying/article/details/107644485)
+
 ## 个人博客
 
 CSDN：[卤小蛋学编程](https://blog.csdn.net/applying)
