@@ -16,6 +16,7 @@
 2. [整合 Mybaits & Mybatis 逆向工程 Demo](https://blog.csdn.net/Applying/article/details/98533861)
 3. [@RequestParam & @RequestBody 的不同及用法示例](https://blog.csdn.net/Applying/article/details/104488233)
 4. [条件化Bean 根据配置文件加载对应Bean](https://blog.csdn.net/Applying/article/details/106952021)
+5. [@ConfigurationProperties(prefix=xx) 单元测试注入](https://blog.csdn.net/Applying/article/details/108522669)
 
 ## Spring Cloud
 
