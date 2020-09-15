@@ -8,8 +8,8 @@
 
 ## Java 单元测试
 
-[对异步回调方法进行单元测试](https://blog.csdn.net/Applying/article/details/108035636)
-
+1. [对异步回调方法进行单元测试](https://blog.csdn.net/Applying/article/details/108035636)
+2. [Mockito捕获多次调用的方法的参数](https://blog.csdn.net/Applying/article/details/108610984)
 
 ## Spring Boot
 
@@ -22,7 +22,6 @@
 ## Spring Cloud
 
 [Spring Cloud 热更新机制原理学习](https://blog.csdn.net/Applying/article/details/104720322)
-[Mockito捕获多次调用的方法的参数](https://blog.csdn.net/Applying/article/details/108610984)
 
 ## Git
 
