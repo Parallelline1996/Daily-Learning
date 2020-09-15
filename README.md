@@ -10,6 +10,7 @@
 
 [对异步回调方法进行单元测试](https://blog.csdn.net/Applying/article/details/108035636)
 
+
 ## Spring Boot
 
 1. [简单 Spring Boot 应用启动 Demo & 启动类扫描范围](https://blog.csdn.net/Applying/article/details/103247024)
@@ -21,6 +22,7 @@
 ## Spring Cloud
 
 [Spring Cloud 热更新机制原理学习](https://blog.csdn.net/Applying/article/details/104720322)
+[Mockito捕获多次调用的方法的参数](https://blog.csdn.net/Applying/article/details/108610984)
 
 ## Git
 
