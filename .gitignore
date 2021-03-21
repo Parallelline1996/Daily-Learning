@@ -1,0 +1,12 @@
+
+# gRPC
+
+gRPC/code-repository/grpc-springboot-demo/grpc-springboot-demo-api/.idea
+gRPC/code-repository/grpc-springboot-demo/grpc-springboot-demo-api/istio-grpc-demo-api.iml
+gRPC/code-repository/grpc-springboot-demo/grpc-springboot-demo-api/target
+gRPC/code-repository/grpc-springboot-demo/grpc-springboot-demo-consumer/.idea
+gRPC/code-repository/grpc-springboot-demo/grpc-springboot-demo-consumer/istio-grpc-demo-api.iml
+gRPC/code-repository/grpc-springboot-demo/grpc-springboot-demo-consumer/target
+gRPC/code-repository/grpc-springboot-demo/grpc-springboot-demo-server/.idea
+gRPC/code-repository/grpc-springboot-demo/grpc-springboot-demo-server/istio-grpc-demo-api.iml
+gRPC/code-repository/grpc-springboot-demo/grpc-springboot-demo-server/target
