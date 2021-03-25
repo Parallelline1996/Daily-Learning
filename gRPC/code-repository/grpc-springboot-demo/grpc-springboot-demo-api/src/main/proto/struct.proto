@@ -1,0 +1,56 @@
+syntax = "proto3"; //指定正在使用proto3语法，没有则默认为proto2
+
+option java_package = "grpc.springboot.demo.api";
+option java_outer_classname = "ComplexStructService";
+
+package complex.struct.service;
+
+service ComplexStruct {
+    //定义一个rpc方法，请求跟相应的内容，均为自定义类型
+    rpc invoker (ComplexStructRequest) returns (ComplexStructResponse) {}
+}
+
+//定义请求体
+message ComplexStructRequest {
+    //定义字符串类型
+    string msg = 1;
+    //定义浮点类型
+    double num = 2;
+    //定义long类型
+    sint64 longNum = 3;
+    //定义int类型
+    sint32 shortNum = 4;
+    //定义boolean类型
+    bool check = 5;
+    //定义int型数组
+    repeated sint32 shortNumArray = 6;
+    //定义字符串数组
+    repeated string messageArray = 7;
+    //定义map结构，k-v均为字符串
+    map<string, string> testMap = 8;
+    //定义枚举类型
+    enumType enumTypeNum = 9;
+}
+
+//定义响应类型
+message ComplexStructResponse {
+    //包含了自定义Result
+    Result result = 1;
+    //自定义Result的数组
+    repeated Result resultList = 2;
+    //自定义Result的map
+    map<string, Result> resultMap = 3;
+}
+
+message Result {
+    sint64 id = 1;
+    string message = 2;
+}
+
+//枚举类型
+enum enumType {
+    ENUM_TYPE_0 = 0;
+    ENUM_TYPE_1 = 1;
+    ENUM_TYPE_2 = 2;
+    ENUM_TYPE_3 = 3;
+}

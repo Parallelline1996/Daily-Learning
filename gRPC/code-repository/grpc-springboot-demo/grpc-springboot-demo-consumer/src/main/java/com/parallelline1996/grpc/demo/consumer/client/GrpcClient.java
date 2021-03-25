@@ -6,6 +6,8 @@
 
 package com.parallelline1996.grpc.demo.consumer.client;
 
+import grpc.springboot.demo.api.ComplexStructGrpc;
+import grpc.springboot.demo.api.ComplexStructService;
 import grpc.springboot.demo.api.HelloWorldGrpc;
 import io.grpc.ManagedChannel;
 import io.grpc.ManagedChannelBuilder;
@@ -28,6 +30,7 @@ public class GrpcClient {
     private int port;
 
     private HelloWorldGrpc.HelloWorldBlockingStub stub;
+    private ComplexStructGrpc.ComplexStructBlockingStub complexStructBlockingStub;
     private HelloWorldGrpc.HelloWorldFutureStub futureStub;
 
     public void start() {
@@ -38,12 +41,18 @@ public class GrpcClient {
         stub = HelloWorldGrpc.newBlockingStub(channel);
         // 通过 channel 获取服务端 future-stub
         futureStub = HelloWorldGrpc.newFutureStub(channel);
+        // 通过 channel 获取服务端 blocking-stub
+        complexStructBlockingStub = ComplexStructGrpc.newBlockingStub(channel);
 
         logger.info("gRPC client start, server address: host:{}, port:{}", host, port);
     }
 
     public HelloWorldGrpc.HelloWorldBlockingStub getStub() {
         return this.stub;
+    }
+
+    public ComplexStructGrpc.ComplexStructBlockingStub getComplexStructBlockingStub() {
+        return this.complexStructBlockingStub;
     }
 
     public HelloWorldGrpc.HelloWorldFutureStub getFutureStub() {

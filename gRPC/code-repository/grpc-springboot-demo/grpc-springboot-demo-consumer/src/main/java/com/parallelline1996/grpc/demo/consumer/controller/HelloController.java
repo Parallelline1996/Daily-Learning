@@ -28,7 +28,7 @@ public class HelloController {
     private static final Logger logger = LoggerFactory.getLogger(HelloController.class);
 
     @Autowired
-    GrpcClient configuration;
+    GrpcClient client;
 
     /**
      * 同步发送，阻塞
@@ -44,8 +44,8 @@ public class HelloController {
 
         // 使用stub发送请求至服务端
         try {
-//            HelloWorldGrpc.HelloWorldBlockingStub stub = configuration.getStub().withDeadline(Deadline.after(2L, TimeUnit.SECONDS));
-            HelloWorldGrpc.HelloWorldBlockingStub stub = configuration.getStub();
+//            HelloWorldGrpc.HelloWorldBlockingStub stub = client.getStub().withDeadline(Deadline.after(2L, TimeUnit.SECONDS));
+            HelloWorldGrpc.HelloWorldBlockingStub stub = client.getStub();
             HelloWorldService.HelloResponse response = stub.sayHello(request);
             logger.info("Server response received: [{}]", response.toString());
             return response.getMessage();
@@ -69,7 +69,7 @@ public class HelloController {
 
         // 使用stub发送请求至服务端
         try {
-            ListenableFuture<HelloWorldService.HelloResponse> listenableFuture = configuration.getFutureStub().sayHello(request);
+            ListenableFuture<HelloWorldService.HelloResponse> listenableFuture = client.getFutureStub().sayHello(request);
             HelloWorldService.HelloResponse response = listenableFuture.get();
             logger.info("Server response received: [{}]", response.toString());
             return response.getMessage();
@@ -96,8 +96,8 @@ public class HelloController {
         // 使用stub发送请求至服务端
         try {
 //            HelloWorldGrpc.HelloWorldFutureStub futureStub =
-//                    configuration.getFutureStub().withDeadlineAfter(1L, TimeUnit.SECONDS);
-            HelloWorldGrpc.HelloWorldFutureStub futureStub = configuration.getFutureStub();
+//                    client.getFutureStub().withDeadlineAfter(1L, TimeUnit.SECONDS);
+            HelloWorldGrpc.HelloWorldFutureStub futureStub = client.getFutureStub();
             ListenableFuture<HelloWorldService.HelloResponse> listenableFuture = futureStub.sayHello(request);
 
             listenableFuture.addListener(() -> {

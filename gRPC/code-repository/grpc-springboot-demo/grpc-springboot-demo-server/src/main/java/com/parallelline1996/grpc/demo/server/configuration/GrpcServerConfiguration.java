@@ -7,6 +7,7 @@
 
 package com.parallelline1996.grpc.demo.server.configuration;
 
+import com.parallelline1996.grpc.demo.server.service.ComplexStructServiceImpl;
 import com.parallelline1996.grpc.demo.server.service.HelloServiceImpl;
 import io.grpc.Server;
 import io.grpc.ServerBuilder;
@@ -28,6 +29,8 @@ public class GrpcServerConfiguration {
     // Grpc 服务端提供的服务
     @Autowired
     private HelloServiceImpl service;
+    @Autowired
+    private ComplexStructServiceImpl complexStructService;
 
     // Grpc 服务端的地址
     @Value("${grpc.server.port}")
@@ -46,7 +49,7 @@ public class GrpcServerConfiguration {
         logger.info("Starting gRPC on port {}.", port);
 
         // 使用默认线程池
-        server = ServerBuilder.forPort(port).addService(service).build().start();
+        server = ServerBuilder.forPort(port).addService(service).addService(complexStructService).build().start();
 
         // 使用自定义线程池用于处理请求
 //        server = ServerBuilder.forPort(port).addService(service).executor(executor).build().start();
