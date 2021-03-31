@@ -30,6 +30,8 @@ message ComplexStructRequest {
     map<string, string> testMap = 8;
     //定义枚举类型
     enumType enumTypeNum = 9;
+    //定义字节数组
+    bytes data = 10;
 }
 
 //定义响应类型

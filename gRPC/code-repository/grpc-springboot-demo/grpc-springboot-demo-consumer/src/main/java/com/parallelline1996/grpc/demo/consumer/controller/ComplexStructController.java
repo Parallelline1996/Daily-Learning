@@ -6,6 +6,7 @@
 
 package com.parallelline1996.grpc.demo.consumer.controller;
 
+import com.google.protobuf.ByteString;
 import com.parallelline1996.grpc.demo.consumer.client.GrpcClient;
 import grpc.springboot.demo.api.ComplexStructGrpc;
 import grpc.springboot.demo.api.ComplexStructService;
@@ -43,6 +44,10 @@ public class ComplexStructController {
         Map<String, String> testMap = new HashMap<>();
         testMap.put("key1", "value1");
         testMap.put("key2", "value2");
+
+        String string = "hello world";
+        byte[] bytes = string.getBytes();
+
         ComplexStructService.ComplexStructRequest request = ComplexStructService.ComplexStructRequest
                 .newBuilder()
                 // 添加基础的数据类型
@@ -61,6 +66,8 @@ public class ComplexStructController {
                 // 在已添加的 map 对象基础上，再添加元素
                 .putTestMap("key3", "value3")
                 .setEnumTypeNum(ComplexStructService.enumType.ENUM_TYPE_3)
+                // 不能直接将byte[]类型放入，需要通过protobuf的ByteString进行一次转换
+                .setData(ByteString.copyFrom(bytes))
                 .build();
         logger.info("Build request:{}", request);
 

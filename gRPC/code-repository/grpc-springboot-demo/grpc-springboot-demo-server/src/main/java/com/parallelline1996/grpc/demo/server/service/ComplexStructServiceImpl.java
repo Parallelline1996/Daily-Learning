@@ -60,6 +60,10 @@ public class ComplexStructServiceImpl extends ComplexStructGrpc.ComplexStructImp
         int enumTypeValue = request.getEnumTypeNumValue();
         logger.info("enumType:{}, enumTypeValue:{}", enumType, enumTypeValue);
 
+        // 获取字节数组
+        byte[] bytes = request.getData().toByteArray();
+        logger.info("data:{}", new String(bytes));
+
         // 构建响应类
         ComplexStructService.Result result = buildResult(100L, "single result");
 
